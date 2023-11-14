@@ -8,4 +8,4 @@ def test_google_search(browser_window):
 
 def test_no_result(browser_window):
     browser.element('[name="q"]').should(be.blank).type('lsidurfjhsdjkfhjk').press_enter()
-    browser.element('[id="result-stats"]').should(have.text('Результатов: примерно 0'))
+    browser.element('.card-section').should(have.text('ничего не найдено'))
